@@ -37,3 +37,10 @@ class KiwoomWrapper:
         self.kiwoom._comm_rq_data("opt10001_req", "opt10001", 0, "0101")
         return self.kiwoom.pbr
 
+    def get_per(self, code):
+        self.kiwoom._set_input_value("종목코드", code)
+        self.kiwoom._comm_rq_data("opt10001_req", "opt10001", 0, "0101")
+        return self.kiwoom.per
+
+
+

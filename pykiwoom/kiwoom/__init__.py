@@ -73,6 +73,7 @@ class Kiwoom(QAxWidget):
 
     def _opt10001(self, rqname, trcode):
         self.pbr = self._comm_get_data(trcode, "", rqname, 0, "PBR")
+        self.per = self._comm_get_data(trcode, "", rqname, 0, "PER")
 
     def _opt10081(self, rqname, trcode):
         data_cnt = self._get_repeat_cnt(trcode, rqname)
