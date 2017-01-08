@@ -10,3 +10,4 @@ pbr = wrapper.get_pbr('000660')
 per = wrapper.get_per('000660')
 print(pbr, per)
 
+print("test mo")
