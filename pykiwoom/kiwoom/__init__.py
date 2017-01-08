@@ -62,12 +62,17 @@ class Kiwoom(QAxWidget):
         # get data according to tr
         if rqname == "opt10081_req":
             self._opt10081(rqname, trcode)
+        elif rqname == "opt10001_req":
+            self._opt10001(rqname, trcode)
 
         # exit event loop for tr
         try:
             self.tr_event_loop.exit()
         except AttributeError:
             pass
+
+    def _opt10001(self, rqname, trcode):
+        self.pbr = self._comm_get_data(trcode, "", rqname, 0, "PBR")
 
     def _opt10081(self, rqname, trcode):
         data_cnt = self._get_repeat_cnt(trcode, rqname)

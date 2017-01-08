@@ -1,9 +1,11 @@
-import pykiwoom
+from pykiwoom.kiwoom import *
+from pykiwoom.wrapper import *
 
-df1 = pykiwoom.get_daily_data('000660', start='20161205', end='20161216')
-df2 = pykiwoom.get_daily_data('000660', end='20161216', req_count=20)
+kiwoom = Kiwoom()
+kiwoom.comm_connect()
 
-print(df1)
-print(df2)
-
+wrapper = KiwoomWrapper(kiwoom)
+df = wrapper.get_daily_data('000660', start='20161201', end='20161210')
+pbr = wrapper.get_pbr('000660')
+print(pbr)
 
