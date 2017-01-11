@@ -1,6 +1,9 @@
 # pykiwoom
 Python module for Kiwoom Open API+
 
+# install
+> pip install pykiwoom
+
 # usages
 
 ```python
